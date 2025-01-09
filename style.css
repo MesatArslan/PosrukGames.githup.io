@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #0c0f14; /* Deep black-space background */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(2, 13, 19, 0.1)); /* Başlangıçta tam opak */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease, opacity 0.3s ease; /* Opaklık geçişini de ekliyoruz */
+}
+
+span {
+    color: #ffb74d;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 21px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffb74d; /* Golden highlight */
+}
+
+.firstlogo {
+    display: flex;
+    align-items: center;
+}
+
+.firstlogo-icon {
+    width: 50px; /* Adjust the size of the image */
+    height: 50px; /* Adjust the size of the image */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+.logo span {
+    color: #ffb74d; /* Golden logo highlight */
+}
+
+.hero {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.game-promo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-emblem {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.playstore-btn {
+    background-color: #3c9cdc;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.playstore-btn:hover {
+    background-color: #2c7cb8;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark layer */
+}
+
+.content {
+    z-index: 1;
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #fff;
+}
+
+.bio {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background: linear-gradient(135deg, #01e928, #00a2ff); /* Warm red and blue gradient for the button */
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg,  #00a2ff, #01e928); /* Gradient transition for button hover */
+}
+
+
+/* Project part */
+
+.projects {
+    padding: 50px 20px; /* Padding around the section */
+    background-color: #1f2d3d; /* Light background color for the section */
+    text-align: center; /* Center-align text in the section */
+}
+
+.projects h2 {
+    font-size: 36px; /* Make the font size larger for visibility */
+    margin-bottom: 30px; /* Space below the heading */
+    color: #ffffff; /* Dark color for the heading */
+    text-transform: uppercase; /* Uppercase for heading text */
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the cards horizontally */
+    gap: 20px; /* Space between cards */
+}
+
+.project-card {
+    position: relative;
+    width: 80%; /* Reduce the width to make the card smaller */
+    padding-bottom: 45%; /* Keep 16:9 aspect ratio (smaller size, reduced height) */
+    background-color: #1f2d3d;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    clip-path: polygon(100% 100%, 80% 0, 0 0, 0 100%, 100% 100%);
+}
+
+.project-text h3 {
+    font-size: 25px;
+    margin: 16px 16px 17px;
+    text-align: center;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-text p {
+    font-size: 1.7vw; /* Font size is 3% of the viewport width */
+    line-height: 1.6;
+    text-indent: 5%; 
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-text a {
+    color: #ffb74d;
+    text-decoration: none;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.project-text a:hover {
+    color: #fff;
+}
+
+.image-controls {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.image-controls button {
+    background-color: #3c9cdc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.image-controls button:hover {
+    background-color: #2c7cb8;
+}
+
+
+/* Footer part */
+
+footer {
+    padding: 20px;
+    background-color: #0c0f14; /* Footer arka planı */
+    color: #fff;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    align-items: flex-start; /* Üst başlıkları yukarıya hizaladık */
+    margin-bottom: 20px;
+}
+
+.footer-top .logo img {
+    width: 300px; /* Logo genişliği */
+    height: auto;
+}
+
+.footer-top .company,
+.footer-top .links {
+    font-size: 18px;
+    text-align: left; /* Metinleri sola hizaladık */
+}
+
+.footer-top .company ul,
+.footer-top .links ul {
+    padding-left: 20px;
+}
+
+.footer-top .company ul li,
+.footer-top .links ul li {
+    margin: 5px 0;
+}
+
+.footer-top .company ul li a,
+.footer-top .links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-top .company ul li a:hover,
+.footer-top .links ul li a:hover {
+    color: #ffb74d; /* Altın sarısı hover rengi */
+}
+
+hr {
+    border: 1px solid #454545; /* Üst ve alt çizgi */
+    margin: 10px 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    color: #ffb74d; /* Hover rengini altın sarısı yapalım */
+}
+
+footer p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Media Queries for Mobile and Smaller Devices */
+
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .game-emblem {
+        width: 100px; /* Adjust game emblem size for mobile */
+    }
+
+    .playstore-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-top .logo img {
+        width: 200px;
+    }
+
+    .footer-top .company,
+    .footer-top .links {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .social-links a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo span {
+        font-size: 16px;
+    }
+
+    .playstore-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .projects h2 {
+        font-size: 30px;
+    }
+
+    
+
+    .social-links a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        display: none;
+    }
+
+    .project-text p {
+        display: none; /* This will hide the project descriptions specifically */
+    }
+
+    .project-text h3 {
+        font-size: 22px; /* Adjust size for tablet screens */
+        text-align: center; /* Center-align heading */
+    }
+
+    .project-text a {
+        font-size: 16px; /* Increase link size slightly for better readability */
+        position: relative;
+        bottom: 10px; /* Slightly adjust positioning */
+        bottom: 30px;
+        right: 40px;
+        position: absolute;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-text h3 {
+        font-size: 20px; /* Adjust size for smaller screens */
+        text-align: center; /* Center-align the heading for phones */
+        margin: 1px 1px 17px; /* Optional: Adjust margin */
+    }
+
+    .project-text a {
+        font-size: 15px; /* Adjust font size for better readability on small screens */
+        position: inherit;
+        bottom: 7px; /* Optional: Adjust position if necessary */
+        right: 5px; /* Optional: Adjust left positioning */
+        font-weight: bold; /* Optional: Make the link bold for emphasis */
+    }
+}
+
+
+
+
+
+
